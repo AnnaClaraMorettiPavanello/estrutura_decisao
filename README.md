@@ -4,4 +4,4 @@
 
 ### IF-ELSE 
 
-- Lista de Exercícios 02
+- Lista de Exercícios 01
