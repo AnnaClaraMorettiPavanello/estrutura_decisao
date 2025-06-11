@@ -13,9 +13,33 @@
     
     //PROCESSAMENTO
 
-    if ((saque < 10) || (saque > 600)) {(`O valor informado é inválido.`);}
-    else ((saque / 100) (saque /10))
-    
+    if ((saque < 10) || (saque > 600)) {(`O valor informado é inválido.`);} 
+
     //SAÍDA
+
+    else {
+        let restante = saque;
+
+        const n100 = Math.floor (restante / 100); 
+        restante %= 100;
+
+        const n50 = Math.floor (restante / 50);
+        restante %= 50;
+
+        const n10 = Math.floor (restante / 10);
+        restante %= 10;
+
+        const n5 = Math.floor (restante / 5);
+        restante %= 5;
+
+        const n1 = restante;
+
+        document.write(`As notas para o saque de R$:${saque} são:`)
+        if (n100 > 0) document.write(` ${n100} de 100.`);
+        if (n50 > 0) document.write(` ${n50} de 50.`);
+        if (n10 > 0) document.write(` ${n10} de 10.`);
+        if (n5 > 0) document.write(` ${n5} de 5.`);
+        if (n1 > 0) document.write(` ${n1} de 1.`);
+    }
 
 </script>

@@ -9,10 +9,32 @@
 
     //ENTRADA
 
+    const num1 = Number(prompt(`Informe um número.`));
+    const num2 = Number(prompt(`Informe outro número.`));
+    const operacao = prompt(`Qual operação você deseja realizar?`);
 
     //PROCESSAMENTO
 
-    
+    if (operacao === `+`) {resultado = num1 + num2}
+    else if (operacao === `-`) {resultado = num1 - num2}
+    else if (operacao === `*`) {resultado = num1 * num2}
+    else if (operacao === `/`) { if (num2 !== 0) {resultado = num1 / num2;} else {document.write(`Divisão por zero é inválida.`);}} 
+    else {document.write(`Essa operação não é válida.`);}
+
+    let parOuImpar;
+    if (resultado % 2 === 0) {parOuImpar = "par";} 
+    else {parOuImpar = "ímpar";}
+
+    let positivoOuNegativo;
+    if (resultado >= 0) {positivoOuNegativo = "positivo";} 
+    else {positivoOuNegativo = "negativo";}
+
+    let inteiroOuDecimal;
+    if (resultado % 1 === 0) {inteiroOuDecimal = "inteiro";} 
+    else {inteiroOuDecimal = "decimal";}
+
     //SAÍDA
+
+    document.write(`Resultado da operação é ${resultado}. O número é ${parOuImpar}. É ${positivoOuNegativo}. E é ${inteiroOuDecimal}.`);
 
 </script>
