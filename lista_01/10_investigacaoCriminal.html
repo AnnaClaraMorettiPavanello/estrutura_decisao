@@ -18,9 +18,21 @@
     const devia = prompt(`Devia para a vítma?`);
     const trabalhou = prompt(`Já trabalhou com a vítma?`);
 
+    let provavel = 0 
+
     //PROCESSAMENTO
 
-    
+    if (telefonou == `sim`) {provavel +=1}
+    if (local == `sim`) {provavel +=1}
+    if (mora == `sim`) {provavel +=1}
+    if (devia == `sim`) {provavel +=1}
+    if (trabalhou == `sim`) {provavel +=1}
+
     //SAÍDA
+
+    if (provavel == (1 || 0)) {alert(`Inocente.`);}
+    else if (provavel == 2) {alert(`Suspeita.`);}
+    else if (provavel == (3 || 4)) {alert(`Cúmplice.`);}
+    else {alert(`Assasino`);}
 
 </script>
