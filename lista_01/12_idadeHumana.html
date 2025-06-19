@@ -12,19 +12,20 @@
     //ENTRADA
 
     const idade = Number(prompt(`Qual a idade do seu cão?`));
-    const porte = prompt(`Informe se o porte dele é pequeno, médio ou grande.`);
+    const porte = prompt(`Informe se o porte dele é pequeno, médio ou grande.`).toLowerCase();
     
     //PROCESSAMENTO
 
-    let pequeno = (idade * 5);
-    let medio = (idade * 6);
-    let grande = (idade * 7);
+    let vezes = 0
+    if (porte === `pequeno`) {vezes = 5}
+    else if (porte === `médio` || `medio`) {vezes = 6}
+    else if (porte === `grande`) {vezes = 7}
+    else {alert(`A informação é inválida, digite "pequeno", "médio" ou "grande".`);}
+
+    const idadeHumana = (idade * vezes);
 
     //SAÍDA
 
-
-    if (porte == pequeno) {alert`A idade humana do seu cão é de ${pequeno} anos.`}
-    else if (porte == médio) {alert`A idade humana do seu cão é de ${medio} anos.`}
-    else {alert`A idade humana do seu cão é de ${grande} anos.`}
+    alert(`A idade humana do seu cão é de ${idadeHumana} anos.`)
 
 </script>
