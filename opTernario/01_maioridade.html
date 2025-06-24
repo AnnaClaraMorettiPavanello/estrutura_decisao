@@ -5,10 +5,17 @@
 
     //Entrada
 
+    const idade = Number(prompt(`Informe a sua idade.`));
 
     //Processamento
 
+    let faltam = 18 - idade;
+    let mensagemFinal;
+
+    (idade < 18) ? mensagemFinal = `Ainda não chegou a maioridade. Faltam ${faltam} anos apara atingir a maioridade.` : mensagemFinal = `Você já atingiu a maioridade!`;
 
     //Saída
+
+    document.write(mensagemFinal);
 
 </script>
