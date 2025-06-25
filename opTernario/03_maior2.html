@@ -5,10 +5,16 @@
 
     //Entrada
 
+    const nUm = Number(prompt(`Informe um número inteiro.`));
+    const nDois = Number(prompt(`Informe outro número inteiro.`));
+    let resultado;
     
     //Processamento
 
-    
+    (nUm > nDois) ? resultado = `O primeiro número é maior que o segundo.` : (nDois > nUm) ? resultado = `O segundo número é maior que o primeiro.` : (nUm === nDois) ? resultado = `Os números são iguais.` : resultado = `Valor inválido!`;
+
     //Saída
     
+    document.write(resultado);
+
 </script>

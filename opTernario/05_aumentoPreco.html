@@ -9,10 +9,15 @@
     
     //Entrada
 
+    const preco = Number(prompt(`Informe o valor do preço do produto.`));
+    let aumento;
 
     //Processamento
 
+    (preco <= 280) ? aumento = preco * 1.2 : (preco <= 700) ? aumento = preco * 1.15 : (preco <= 1500) ? aumento = preco * 1.1 : aumento = preco * 1.05;
     
     //Saída
+
+    document.write(`O preço do produto com o valor do aumento é de ${aumento} reais.`);
 
 </script>

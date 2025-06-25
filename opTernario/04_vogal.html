@@ -5,10 +5,15 @@
 
     //Entrada
 
+    const letra = prompt(`Informe um caractere.`).toLowerCase();
+    let mensagemFinal;
 
     //Processamento
 
+    (letra === `a` || letra === `e` || letra === `i` || letra === `o` || letra ===`u`) ? mensagemFinal = `A letra informada é uma vogal.` : mensagemFinal = `A letra informada não é uma vogal.`;
     
     //Saída
+
+    document.write(mensagemFinal);
 
 </script>
