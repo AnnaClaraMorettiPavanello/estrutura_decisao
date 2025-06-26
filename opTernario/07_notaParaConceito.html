@@ -11,10 +11,19 @@
 
     //Entrada
 
+    const nota = Number(prompt(`Informe a sua nota.`));
+    let resultado;
 
     //Processamento
 
+    (nota >= 9 && nota <= 10) ? resultado = `A sua nota em conceito é "A".` :
+    (nota >= 8 && nota <= 8.9) ? resultado = `A sua nota em conceito é "B".` : 
+    (nota >= 7 && nota <= 7.9) ? resultado = `A sua nota em conceito é "C".` :
+    (nota >= 6 && nota <= 6.9) ? resultado = `A sua nota em conceito é "D".` :
+    resultado = `A sua nota em conceito é "E".`;
     
     //Saída
+
+    document.write(resultado);
 
 </script>

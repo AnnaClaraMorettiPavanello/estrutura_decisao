@@ -7,11 +7,25 @@
 
     //Entrada
 
+    const litCom = Number(prompt(`Informe o preço do litro do combustível.`));
+    const quantLit = Number(prompt(`Informe a quantidade de litros utilizados para se deslocar ao trabalho.`));
+    const transporte = Number(prompt(`Informe o preço do transporte público que deverá pagar para se deslocar ao trabalho.`));
+    let resultado;
+    let melhorValor;
 
     //Processamento
 
+    const combustivel = (litCom * quantLit);
+    const transporteDois = (transporte * 2);
+    const combustivelDois = (combustivel * 2);
+    (combustivelDois < transporteDois ) ? resultado = `carro` :
+    resultado = `transporte público`;
     
     //Saída
 
+    (combustivelDois < transporteDois) ? melhorValor = combustivelDois :
+    melhorValor = transporteDois;
+
+    document.write(`O meio de transporte mais barato é o ${resultado}, e ele custará ${melhorValor} reais.`);
     
 </script>
