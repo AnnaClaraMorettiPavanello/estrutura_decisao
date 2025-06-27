@@ -16,10 +16,18 @@
 
     //ENTRADA
 
+    const salario = Number(prompt(`Informe o seu salário.`));
+    let resultado;
 
     //PROCESSAMENTO
 
+    if (salario > 7000) {resultado = salario * 1.05;}
+    else if (salario > 4000 ) {resultado = salario * 1.075;}
+    else if (salario > 2000) {resultado = salario * 1.10;}
+    else {resultado = salario * 1.15;}
     
     //SAÍDA
+
+    alert(`O seu novo salário é de ${resultado} reais.`);
 
 </script>

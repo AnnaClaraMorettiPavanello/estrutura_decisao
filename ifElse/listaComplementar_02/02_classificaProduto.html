@@ -14,10 +14,21 @@
 
     //ENTRADA
 
+    const codigo = Number(prompt(`Informe o código do produto.`));
+    let mensagemFinal;
 
     //PROCESSAMENTO
 
+    if (codigo === 1) {mensagemFinal = `Alimento não-perecível.`;}
+    else if (codigo === 2 || codigo === 3 || codigo === 4) {mensagemFinal = `Alimento perecível.`;}
+    else if (codigo === 5 || codigo === 6) {mensagemFinal = `Vestuário.`;}
+    else if (codigo === 7) {mensagemFinal = `Higiene pessoal`;}
+    else if (codigo >= 8 && codigo <= 15 ) {mensagemFinal = `Limpeza e Utencílios Domésticos.`;}
+    else if (codigo >= 16 && codigo <= 20) {mensagemFinal = `Outros.`;}
+    else {mensagemFinal = `Código inválido.`;}
     
     //SAÍDA
+
+    alert(mensagemFinal);
 
 </script>

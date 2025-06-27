@@ -11,10 +11,18 @@
 
     //ENTRADA
 
+    const graus = Number(prompt(`Informe a temperatura.`));
+    let mensagemFinal;
 
     //PROCESSAMENTO
 
-    
+    if (graus < 100) {mensagemFinal = `Está muito baixa!`;}
+    else if (graus <= 200) {mensagemFinal = `Está baixa!`;}
+    else if (graus > 200 && graus < 500) {mensagemFinal = `Está normal!`;}
+    else {mensagemFinal = `Está muito alta!`;}
+
     //SAÍDA
+
+    alert(mensagemFinal);
 
 </script>
