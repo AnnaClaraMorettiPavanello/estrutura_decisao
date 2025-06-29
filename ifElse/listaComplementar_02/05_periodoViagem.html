@@ -12,10 +12,20 @@
 
     //ENTRADA
 
+    const distanciaKm = Number(prompt(`Informe a distância da viagem em quilômetros.`));
+    const kmDia = Number(prompt(`Informe quantos quilômetros pretende viajar por dia.`));
+    const soma = (distanciaKm / kmDia);
+    let mensagemFinal;
 
     //PROCESSAMENTO
 
+    if (soma <= 3) {mensagemFinal = `Qualquer período.`;}
+    else if (soma <= 10) {mensagemFinal = `Férias de Julho.`;}
+    else if (soma <= 20) {mensagemFinal = `Férias de Verão.`;}
+    else {mensagemFinal = `Deverá Trabalhar Remoto ${soma} dias.`;}
     
     //SAÍDA
+
+    alert(mensagemFinal);
 
 </script>
