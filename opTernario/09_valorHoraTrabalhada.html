@@ -12,16 +12,17 @@
     const qntdHora = Number(prompt(`Informe a sua quantidade de horas trabalhadas semanalmente.`));
     const valorHora = Number(prompt(`Informe quanto você recebe por hora trabalhada.`));
     let mensagemFinal;
-    const resultado = mensagemFinal * qntdHora;
 
     //Processamento
   
-    (qntdHora <= 45) ? mensagemFinal = `E o preço da sua hora trabalhada é de ${valorHora} reais.` :
-    (qntdHora <= 60) ? mensagemFinal = `E o preço da sua hora trabalhada é de ${valorHora * 0.2} reais.` :
-    mensagemFinal = `E o preço da sua hora trabalhada é de ${0.3} reais.`;
+    (qntdHora <= 45) ? mensagemFinal = qntdHora * valorHora
+    : (qntdHora <= 60) ? mensagemFinal = (qntdHora * valorHora) * 1.2
+    : mensagemFinal = (qntdHora * valorHora) * 1.3
+    let horaFinal = mensagemFinal / qntdHora;
+    
 
     //Saída
 
-    document.write(`O salário fínal recebido semanalmente é de ${resultado}, ${mensagemFinal}`);
+    document.write(`O salário final será de ${mensagemFinal} reais. E o valor da hora trablalhada é de ${horaFinal}.`);
 
 </script>
