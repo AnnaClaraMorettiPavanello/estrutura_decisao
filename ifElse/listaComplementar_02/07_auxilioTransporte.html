@@ -14,14 +14,18 @@
     //ENTRADA
 
     const salario = Number(prompt(`Informe quanto recebe de salário por mês.`));
-    const transporte = prompt(`Você utiliza o próprio veículo para ir ao trabalho? (responda com sim ou não)`).toLowerCase();
     const auxilio = prompt(`Você deseja receber o auxílio?`);
+    const transporte = prompt(`Você utiliza o próprio veículo para ir ao trabalho? (responda com sim ou não)`).toLowerCase();
     let resultado;
 
     //PROCESSAMENTO
 
-    if (auxilio === `sim`) {resultado = ``}
+    if ((auxilio === `sim`) && (transporte === `sim`)) {resultado = `O seu salário com o desconto será de ${salario * 0.94} reais. E o valor final do seu salário será de ${(salario *0.94) + 200}.`;}
+    else if ((auxilio === `sim`) && (transporte === `não`)) {resultado = `O seu salário com o desconto será de ${salario * 0.94} reais. E o valor final do seu salário será de ${(salario *0.94) + 150}.`;}
+    else {resultado = `Você não recebera nenhum desconto e nenhum auxílio no salário, por tanto, o seu salário é de ${salario} reais.`;}
     
     //SAÍDA
+
+    alert(resultado);
 
 </script>
