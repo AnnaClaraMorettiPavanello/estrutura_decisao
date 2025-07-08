@@ -14,9 +14,17 @@
     const valorImovel = Number(prompt(`Informe o valor do imóvel.`));
     const financiamento = Number(prompt(`Informe em quantos anos será realizado o financiamento.`));
     const salario = Number(prompt(`Informe o salário do comprador.`));
+    let parcela = valorImovel / (financiamento * 12);
+    let resultado;
 
     //PROCESSAMENTO
     
+    if (parcela > (salario * 0.3)) {resultado = `A parcela ficou de ${parcela} reais, então o finalciamento não foi concedido.`;}
+    else if (parcela <= (salario * 0.3)) {resultado = `A parcela ficou de ${parcela} reais, então o financiamento foi concedido.`;}
+    else {resultado = `Valor inválido!`;}
+
     //SAÍDA
+
+    alert(resultado);
 
 </script>
