@@ -13,10 +13,19 @@
 
     //ENTRADA
 
+    const valor = Number(prompt(`Informe o valor do computador que está vendendo.`));
+    const formaPagamento = prompt(`Informe a forma de pagamento ((B)Boleto, (D)Dinheiro ou (P)PIX).`).toUpperCase();
+    let resultado;
 
     //PROCESSAMENTO
 
+    if (formaPagamento === `B`) {resultado = `O preço final do computador é de ${valor * 0.97} reais.`;}
+    else if (formaPagamento === `D`) {resultado = `O preço final do computador é de ${valor * 0.95} reais.`;}
+    else if (formaPagamento === `P`) {resultado = `O preço final do computador é de ${valor * 0.90} reais.`;}
+    else {resultado = `Dados inválidos!`;}
     
     //SAÍDA
+
+    alert(resultado);
 
 </script>

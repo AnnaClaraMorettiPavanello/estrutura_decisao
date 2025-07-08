@@ -20,10 +20,26 @@
 
     //ENTRADA
 
+    const carreira = Number(prompt(`Informe quantos anos de carreira você possui.`));
+    const projetoPesquisa = Number(prompt(`Informe quantos Projetos de Pesquisa já coordenou.`));
+    const projetoExtensao = Number(prompt(`Informe quantos Projetos de Extensão que já orientou.`));
+    const tcc = Number(prompt(`Informe quantos TCCs já orientou.`));
 
     //PROCESSAMENTO
 
+    let pontoCarreira = (carreira * 2.5);
+    let pontoProjetoPesquisa = (projetoPesquisa * 5);
+    let pontoProjetoExtensao = (projetoExtensao * 5);
+    let pontoTcc = (tcc * 3);
+    let soma = (pontoCarreira + pontoProjetoPesquisa + pontoProjetoExtensao + pontoTcc);
+    let mensagemfinal;
+
+    if (soma <= 30) {mensagemfinal = `CONVIDADO`;}
+    else if (soma <= 50) {mensagemfinal = `AGREGADO`;}
+    else {mensagemfinal = `TITULAR`;}
     
     //SAÍDA
+
+    alert(mensagemfinal);
 
 </script>
