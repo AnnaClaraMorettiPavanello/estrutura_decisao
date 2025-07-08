@@ -16,10 +16,20 @@
 
     //ENTRADA
 
+    const viagens = Number(prompt(`Informe quantas viagens foram realizadas por dia.`));
+    const cargo = prompt(`Informe qual cargo é ocupado (responda "motorista" ou "cobrador").`).toLowerCase();
+    let resposta;
 
     //PROCESSAMENTO
 
-    
+    if ((cargo === `motorista`) && (viagens <= 10)) {resposta = `O seu cargo é de Motorista e o valor final recebido pelas viagens é de 120 reais.`;}
+    else if ((cargo === `motorista`) && (viagens > 10)) {resposta = `O seu cargo é de Motorista e o valor final recebido pelas viagens é de 135 reais.`;}
+    else if ((cargo === `cobrador`) && (viagens <= 10)) {resposta = `O seu cargo é de Cobrador e o valor final recebido pelas viagens é de 100 reais.`;}
+    else if ((cargo === `cobrador`) && (viagens > 10)) {resposta = `O seu cargo é de Cobrador e o valor final recebido pelas viagens é de 110 reais.`;}
+    else {resposta = `Resposta inválida!`;}
+
     //SAÍDA
+
+    alert(resposta);
 
 </script>
