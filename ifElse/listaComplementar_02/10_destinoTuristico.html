@@ -13,10 +13,24 @@
 
     //ENTRADA
 
+    const destinoSP = Number(prompt(`Informe quanto custa o transporte aéreo para São Paulo.`));
+    const destinoRJ = Number(prompt(`Informe quanto custa o transporte aéreo para Rio de Janeiro.`));
+    const hotelSP = Number(prompt(`Informe quanto custa o preço do hotel em São Paulo.`));
+    const hotelRJ = Number(prompt(`Informe quanto custa o preço do hotel no Rio de Janeiro.`))
+    const dias = Number(prompt(`Informe quantos dias pretende ficar no seu destino.`));
+
+    let somaSP = destinoSP + (hotelSP * dias);
+    let somaRJ = destinoRJ + (hotelRJ * dias);
+
+    let mensagemFinal;
 
     //PROCESSAMENTO
 
+    if (somaSP < somaRJ) {mensagemFinal = `O destino será para São Paulo, com o custo de ${somaSP} reais.`;}
+    else {mensagemFinal = `O destino será para o Rio de Janeiro, com o custo de ${somaRJ} reais.`;}
     
     //SAÍDA
+
+    alert(mensagemFinal);
 
 </script>
