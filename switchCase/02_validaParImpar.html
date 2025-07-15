@@ -7,10 +7,25 @@
 
     //ENTRADA
 
+    const num = Number(prompt(`Informe um número inteiro.`));
+    let resultado;
     
     //PROCESSAMENTO
 
+    switch (num % 2) {
+        case 0: 
+            resultado = `O número é par.`;
+            break;
+        case 1:
+            resultado = `O número é impar.`;
+            break;
+        default: 
+            resultado = `Valor Inválido!`;
+            break;
+    }
     
     //SAÍDA
+
+    alert(resultado);
 
 </script>
