@@ -7,10 +7,26 @@
 
     // ENTRADA
 
+    const caractere = prompt(`Informe um caractare.`).toUpperCase();
+    let mensagemFinal = "";
     
     // PROCESSAMENTO
 
+    switch (caractere) {
+        case "A": 
+        case "E":
+        case "I":
+        case "O":
+        case "U":
+            mensagemFinal = `O caractare informado é uma vogal.`;
+            break;
+        default:
+            mensagemFinal = `O caractare não é uma vogal.`;
+            break;
+    }
     
     // SAÍDA
+
+    alert(mensagemFinal);
 
 </script>
