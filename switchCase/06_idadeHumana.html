@@ -11,10 +11,26 @@
 
     // ENTRADA
 
-    
+    const anos = Number(prompt(`Informe quantos anos o seu cão tem.`));
+    let porte = prompt(`Informe o porte do seu cão. (use "P" para pequeno, "M" para médio e "G" para grande)`).toUpperCase();
+    let idadeHumana;
+
     // PROCESSAMENTO
 
+    switch (porte) {
+        case "P":
+            idadeHumana = anos * 5;
+            break;
+        case "M": 
+            idadeHumana = anos * 6;
+            break;
+        case "G": 
+            idadeHumana = anos * 7;
+            break;
+    }
     
     // SAÍDA
+
+    document.write(`A idade humana do seu cão é de ${idadeHumana} anos.`);
 
 </script>
