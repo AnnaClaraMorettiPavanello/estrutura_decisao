@@ -13,10 +13,104 @@
 
     //ENTRADA
 
+    const telefonou = prompt(`Você telefonou para a vítima? (use s-sim e n-não)`).toLowerCase();
+    const local = prompt(`Esteve no local do crime? (use s-sim e n-não)`).toLowerCase();
+    const mora = prompt(`Mora perto da vítima? (use s-sim e n-não)`).toLowerCase();
+    const devia = prompt(`Devia para a vítima? (use s-sim e n-não)`).toLowerCase();
+    const trabalhou = prompt(`Já trabalhou com a vítima? (use s-sim e n-não)`).toLowerCase();
+    let somaTelefonou;
+    let somaLocal;
+    let somaMora;
+    let somaDevia;
+    let somaTrabalhou;
+    let mensagemFinal; 
+    let soma = somaTelefonou + somaLocal + somaMora + somaDevia + somaTrabalhou;
     
     //PROCESSAMENTO
 
+    switch (telefonou) {
+        case `s`: 
+            somaTelefonou++;
+            break;
+        default:
+            somaTelefonou = `0`;
+            break;
+    }
+    switch (local) {
+        case `s`:
+            somaLocal = `1`;
+            break;
+        default:
+            somaLocal = `0`;
+            break;
+    }
+    switch (mora) {
+        case `s`:
+            somaMora = `1`;
+            break;
+        default:
+            somaMora = `0`;
+            break;
+    }
+    switch (devia) {
+        case `s`:
+            somaDevia = `1`;
+            break;
+        default: 
+            somaDevia = `0`;
+            break;
+    }
+    switch (trabalhou) {
+        case `s`:
+            somaTrabalhou = `1`;
+            break;
+        default: 
+            somaTrabalhou = `0`;
+            break;
+    }
+    switch (soma) {
+        case `0`:
+        case `1`:
+            mensagemFinal = `A sua classificação é: Inocente.`;
+            break;
+        case `2`:
+            mensagemFinal = `A sua clasificação é: Suspeita.`;
+            break;
+        case `3`:
+        case `4`:
+            mensagemFinal = `A sua classificação é : Cúmplice.`;
+            break;
+        case `5`:
+            mensagemFinal = `A sua classificação é: Assassino.`;
+            break;
+        default:
+            mensagemFinal = `Dados inválidos!`;
+            break;
+    }
 
     //SAÍDA
 
+    alert(mensagemFinal);
+
 </script>
+
+
+Sugestão:
+
+Linha 27: Remover soma antes de você definir todas as somas, assim você esta somando variaveis sem valores
+
+let somaTotal
+
+switch(telefonou) {
+    case "S":
+    somaTotal++
+}
+
+[...]
+
+switch(somaTotal)
+case 0:
+case 1:
+mensagemFinal = "inocente"
+case 2:
+[...]
