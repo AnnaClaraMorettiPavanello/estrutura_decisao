@@ -6,12 +6,90 @@
     De acordo com as respostas, informe qual a estação do ano correspondente.
     */
 
-    //ENTRADA
+      // ENTRADA
 
-    
-    //PROCESSAMENTO
+    const hemisferio = prompt(`Informe em qual emisferio você está (norte/sul)`).toLowerCase();
+    const mes = prompt(`Informe o mês atual (ex: Janeiro, Fevereiro, Março...).`).toLowerCase();
+    let estacao;
+    let grupoMes;
 
+    // PROCESSAMENTO
 
-    //SAÍDA
+   switch (mes) {
+        case `dezembro`:
+        case `janeiro`:
+        case `fevereiro`:
+            grupoMes = `1`;
+            break;
+        case `março`:
+        case `abril`:
+        case `maio`:
+            grupoMes = `2`;
+            break;
+        case `junho`:
+        case `julho`:
+        case `agosto`:
+            grupoMes = `3`;
+            break;
+        case `setembro`:
+        case `outubro`:
+        case `novembro`:
+            grupoMes = `4`;
+            break;
+        default:
+            grupoMes = `invalido`;
+    }
+    switch (hemisferio) {
+        case `sul`:
+            switch (grupoMes) {
+                case `1`:
+                    estacao = `Verão`;
+                    break;
+                case `2`:
+                    estacao = `Outono`;
+                    break;
+                case `3`:
+                    estacao = `Inverno`;
+                    break;
+                case `4`:
+                    estacao = `Primavera`;
+                    break;
+                default:
+                    estacao = `Mês inválido.`;
+            }
+            break;
+        case `norte`:
+            switch (grupoMes) {
+                case `1`:
+                    estacao = `Inverno`;
+                    break;
+                case `2`:
+                    estacao = `Primavera`;
+                    break;
+                case `3`:
+                    estacao = `Verão`;
+                    break;
+                case `4`:
+                    estacao = `Outono`;
+                    break;
+                default:
+                    estacao = `Mês inválido.`;
+            }
+            break;
+        default:
+            estacao = `Hemisfério inválido.`;
+    }
 
+    // SAÍDA 
+
+    switch (estacao) {
+        case `Verão`:
+        case `Outono`:
+        case `Inverno`:
+        case `Primavera`:
+            alert(`A estação do ano no hemisfério ${hemisferio} é: ${estacao}.`);
+            break;
+        default:
+            alert(`Dado inválido!`);
+    }
 </script>
